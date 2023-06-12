@@ -1,14 +1,17 @@
 // Написать функцию, которая на вход принимает целое число, а возвращает массив, который сформирован 
 // по следующим правилам: количество элементов соответствует 
 // переданному числу, массив начинается с 1, каждый последующий элемент больше предыдущего в 2 раза.
-var array: [Int]
 
-func getArray (num: Int){
-    var array: [Int] = [1]
-    for i in 0 ..< num{
-        array[i] *= 2 
-        array.append(array[i])
+
+func getArray (num: Int) -> [Int]{
+    var array: [Int] = []
+    for i in 1 ... num{
+        if i == 1{
+            array.append(i)
+        } else{
+            array.append(array[i-2]*2)
+        }
     }
-    print(array)
+    return array
 }
-getArray(num: 4)
+print(getArray(num: 4))
