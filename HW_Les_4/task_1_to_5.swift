@@ -50,9 +50,12 @@ class Pizzeria{
       let cat = Pizza(type: .prosciuttoEFunghi, price: 300, dough: .thick, additives: .anchovies)
       self.init(pizza: [moon, cat])
     }
-    func addNewPizzaType(pizza: Pizza){
+    func addNewPizzaType(_ pizza: Pizza){
         self.pizza.append(pizza)
-        print(pizza)
+        //print(pizza)
+    }
+    func getMenu() -> [Pizza]{
+        pizza
     }
 }
 // 5. Создать экземпляр класса пиццерии и добавить в него несколько видов пицц.
@@ -60,4 +63,5 @@ let hot = Pizza(type: .quattroStagioni, price: 230, dough: .thin, additives: .mu
 let cool = Pizza(type: .braccioDiFerro, price: 150, dough: .thick, additives: .seafood)
 var pizzeria = Pizzeria(pizza: [hot, cool])
 var newPizzeria = Pizzeria()
+pizzeria.addNewPizzaType(Pizza(type: .prosciuttoEFunghi, price: 300, dough: .thick, additives: .anchovies))
 
