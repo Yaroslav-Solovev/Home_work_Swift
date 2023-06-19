@@ -1,7 +1,7 @@
 // 5. Написать функцию, в которой происходит вычитание одного числа из другого. 
 // Функция должна работать и с Int, и с Double.Функция должна возвращать результат вычитания.
 
-func difference(a: Double , b: Double) -> Double{
+func difference<T: Numeric>(a: T , b: T) -> T{
     return a - b
 }
 
