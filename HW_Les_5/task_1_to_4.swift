@@ -46,9 +46,11 @@ struct Pizza: MenuProtocol{
     let cost: Double
     let dough: Dough
     var additives: Additives
-    init(type: PizzaType, cost: Double) {
+    init(type: PizzaType, cost: Double, dough: Dough, additives: Additives) {
         self.type = type
         self.cost = cost
+        self.dough = dough
+        self.additives = additives
     }
 }
 
@@ -67,9 +69,10 @@ struct PotatoFrite: MenuProtocol{
     var name: String { type.rawValue + " potato frite"}
     let cost: Double
     let size: Double
-    init(type: PotatoFriteType, cost: Double) {
+    init(type: PotatoFriteType, cost: Double, size: Double) {
         self.type = type
         self.cost = cost
+        self.size = size
     }
 }
 
